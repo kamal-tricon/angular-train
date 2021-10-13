@@ -1,0 +1,13 @@
+
+<div class="stations-container" *ngIf="openStationForm">
+  <div class="add-new-item">
+    <button class="button1-styles" (click)="addNewStation(true)">Add New Station</button>
+  </div>
+  <app-common-table [headers]="stationHeaders" [tableBodyItems]="stationDisplayData"
+    *ngIf="stationDisplayData.length > 0" (eventEmitter)="eventEmitter($event)">
+  </app-common-table>
+</div>
+<div class="common-popup" *ngIf="showAddNewPopup">
+  <app-add-edit-popup [inputList]="inputList" [popupHeading]="popupHeading" (emitterEvent)="onPopupAction($event)">
+  </app-add-edit-popup>
+</div>

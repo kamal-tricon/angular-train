@@ -1,0 +1,31 @@
+<div class="table-parent-container">
+  <table class="main-table-container">
+    <thead class="header-row table-body-single-row">
+      <th class="single-td-item" *ngFor="let header of headers;">
+        {{header}}
+      </th>
+      <th class="single-td-item">
+      </th>
+    </thead>
+    <tbody class="table-body-main-container">
+      <tr class="table-body-single-row" *ngFor="let station of tableBodyItems; let i = index;"
+        [ngClass]="{'odd-table-row': i % 2 === 1}">
+        <td class="single-td-item" *ngFor="let item of station;">
+          {{item.value}}
+        </td>
+        <td class="single-td-item">
+          <img style="cursor: pointer;" src="assets/delete-icon.png" alt="delete" (click)="delete(station)">
+        </td>
+        <!-- <td class="single-td-item">
+          {{station.stationCode}}
+        </td>
+        <td class="single-td-item">
+          {{station.city}}
+        </td>
+        <td class="single-td-item">
+          {{station.state}}
+        </td> -->
+    </tr>
+    </tbody>
+</table>
+</div>

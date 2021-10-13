@@ -1,0 +1,18 @@
+@import "src/app/common.styles.scss";
+
+.main-table-container{
+    width: 100%;
+}
+.single-td-item{
+    display: table-cell;
+    // width: 210px;
+    padding: 10px 10px 5px 10px;
+    text-align: left;
+}
+.stations-container{
+    margin-top: 20px;
+}
+.table-body-main-container{
+    max-height: 450px;
+    overflow-y: auto;
+}

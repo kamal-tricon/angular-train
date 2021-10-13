@@ -1,0 +1,13 @@
+
+<div class="trains-container" *ngIf="openTrainForm">
+  <div class="add-new-item">
+    <button class="button1-styles" (click)="addNewTrain(true)">Add New Train</button>
+  </div>
+  <app-common-table [headers]="trainHeaders" [tableBodyItems]="trainDisplayData"
+    *ngIf="trainDisplayData.length > 0" (eventEmitter)="eventEmitter($event)">
+  </app-common-table>
+</div>
+<div class="common-popup" *ngIf="showAddNewPopup">
+  <app-add-edit-popup [inputList]="inputList" [popupHeading]="popupHeading" (emitterEvent)="onPopupAction($event)">
+  </app-add-edit-popup>
+</div>

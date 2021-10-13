@@ -1,0 +1,20 @@
+<div class="add-edit-popup-body">
+    <div class="heading">
+        <span>{{popupHeading}}</span>
+        <span class="cross-mark" (click)="showHidePopup(false, false, true)">&#x2716;</span>
+    </div>
+    <div class="input-fields-container">
+        <div class="single-input-field" *ngFor="let input of inputList;">
+            <div class="input-heading">
+                {{input.heading}}
+            </div>
+            <div class="input-value-section">
+                <input class="input-value" type="{{input.type}}" [(ngModel)]="input.value">
+            </div>
+        </div>
+    </div>
+    <div class="button-container">
+        <button class="button1-styles button2-styles" (click)="showHidePopup(false, true, false)">Cancel</button>
+        <button class="button1-styles common-margin-left" (click)="showHidePopup(true, false, false)">Save</button>
+    </div>
+</div>

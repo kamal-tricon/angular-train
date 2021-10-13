@@ -1,0 +1,10 @@
+<div class="body-container-dashboard">
+  <div class="common-div-card" (click)="getStations()">Browse Stations</div>
+  <div class="common-div-card" (click)="getTrains()">Browse Trains</div>
+  <div class="summary-count" style="float: right;">
+    <div class="">Total Stations Added: {{summaryCount.stationCount}}</div> 
+    <div class="">Total Trains Added: {{summaryCount.trainCount}}</div> 
+  </div>
+  <app-station *ngIf="showStations"></app-station>
+  <app-train *ngIf="showTrains"></app-train>
+</div>
