@@ -10,7 +10,7 @@ export class LoginService {
     private http: HttpClient
   ) { }
 
-  url = 'http://localhost:3000';
+  url = 'http://54.205.73.32:3000';
 
   getData() {
     return 'This is returning from the Dashboard Service';

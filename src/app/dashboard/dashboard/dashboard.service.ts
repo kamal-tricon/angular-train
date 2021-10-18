@@ -10,7 +10,7 @@ export class DashboardService {
     private http: HttpClient
   ) { }
 
-  url = 'http://localhost:3000';
+  url = 'http://54.205.73.32:3000';
 
   userCount = new Observable((subscriber) => {
     subscriber.next(90);
