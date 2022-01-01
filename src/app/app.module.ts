@@ -7,10 +7,13 @@ import { LoginComponent } from './login/login.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
+import { AuthGuardService } from './auth/auth-guard.service';
+import { DisplayDataComponent } from './display-data/display-data.component';
 @NgModule({
   declarations: [
     AppComponent,
-    LoginComponent
+    LoginComponent,
+    DisplayDataComponent
   ],
   imports: [
     BrowserModule,
@@ -20,7 +23,7 @@ import { RouterModule } from '@angular/router';
     AppRoutingModule,
     RouterModule
   ],
-  providers: [],
+  providers: [AuthGuardService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

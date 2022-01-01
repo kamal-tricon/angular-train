@@ -10,13 +10,15 @@ export class DashboardService {
     private http: HttpClient
   ) { }
 
-  url = 'http://54.205.73.32:3000';
+  url = 'http://localhost:3000';
 
   userCount = new Observable((subscriber) => {
     subscriber.next(90);
   });
 
   subject = new Subject();
+
+  behaviourSubject$ = new BehaviorSubject('Default value');
 
   summaryDetails = new BehaviorSubject<{trainCount: number, stationCount: number}>(
     {

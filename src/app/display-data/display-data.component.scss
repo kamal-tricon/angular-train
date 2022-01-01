@@ -1,0 +1,16 @@
+.table-container{
+    max-height: 400px;
+    overflow-y: auto;
+    width: 500px;
+    .even-row{
+        background-color: azure;
+        height: 40px;
+    }
+    .odd-row{
+        background-color: rgb(152, 177, 177);
+        height: 40px;
+    }
+}
+table{
+    table-layout: fixed;
+}

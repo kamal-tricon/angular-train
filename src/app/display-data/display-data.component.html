@@ -1,0 +1,45 @@
+<div class="main-container">
+    <!-- <div class="row-container" *ngFor="let data of tableData; ">
+        <span>
+            {{data.details.subcategory}}
+        </span>
+        <span>
+            {{data.details.title}}
+        </span>
+        <span>
+            {{data.details.price}}
+        </span>
+        <span>
+            {{data.details.popularity}}
+        </span>
+    </div> -->
+    <input type="text" [(ngModel)]="searchText" (ngModelChange)="changeInput()">
+    <div class="table-container">
+        <table>
+            <thead>
+                <th>Subcategory</th>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Popularity</th>
+            </thead>
+            <tbody>
+                <tr *ngFor="let data of list; let even = even"
+                [ngClass]="{'even-row': even, 'odd-row': !even}">
+                    <td>
+                        {{data.details.subcategory}}
+                    </td>
+                    <td>
+                        {{data.details.title}}
+                    </td>
+                    <td>
+                        {{data.details.price}}
+                    </td>
+                    <td>
+                        {{data.details.popularity}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+</div>

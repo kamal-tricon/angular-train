@@ -22,15 +22,19 @@ export class DashboardComponent implements OnInit{
   };
 
   ngOnInit(): void {
+    this.dashboardService.behaviourSubject$.next('First new value');
+    this.dashboardService.behaviourSubject$.subscribe((data) => {
+      console.log(data);
+    });
     this.dashboardService.userCount.subscribe((observer) => {
-      console.log(observer);
+      // console.log(observer);
     });
     this.dashboardService.getSummaryCount().subscribe((data: any) => {
       this.dashboardService.summaryDetails.next(Object.assign({}, data));
     });
 
     this.dashboardService.summaryDetails.subscribe((data) => {
-      console.log(data);
+      // console.log(data);
       this.summaryCount = Object.assign({}, data);
     });
   }

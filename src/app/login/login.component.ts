@@ -40,6 +40,9 @@ export class LoginComponent implements OnInit, OnDestroy {
       this.errorMessage = data.error;
       if (!this.errorMessage) {
         this.router.navigate(['/dashboard']);
+        sessionStorage.setItem('authorize', 'true');
+      } else {
+        sessionStorage.setItem('authorize', 'false');
       }
     });
   }

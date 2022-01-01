@@ -10,7 +10,9 @@ export class LoginService {
     private http: HttpClient
   ) { }
 
-  url = 'http://54.205.73.32:3000';
+  url = 'http://localhost:3000';
+
+  tempUrl = 'https://mindler-dashboard.s3.us-east-2.amazonaws.com/products.json';
 
   getData() {
     return 'This is returning from the Dashboard Service';
@@ -18,5 +20,9 @@ export class LoginService {
 
   login(request) {
     return this.http.post(`${this.url}/login`, request);
+  }
+
+  getTempData() {
+    return this.http.get(this.tempUrl);
   }
 }
